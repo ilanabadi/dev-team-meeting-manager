@@ -25,5 +25,11 @@ insert into dev_teams (team_name) values ("Marketing Team");
 insert into dev_teams (team_name) values ("Mobile Team");
 insert into dev_teams (team_name) values ("React Team");
 insert into dev_teams (team_name) values ("UI Team");
-insert into meetings (team_id,`from`,`to`,`description`,room)
-values (1, '11/03/2026 10:00', '11/03/2026 13:00', 'Getting the plan come together','Blue Room');
+INSERT INTO meetings (team_id, `from`, `to`, description, room)
+VALUES (
+    (SELECT team_id FROM dev_teams WHERE team_name = 'A-Team'), 
+    '11/03/2026 10:00', 
+    '11/03/2026 13:00', 
+    'Getting the plan come together', 
+    'Blue Room'
+);
