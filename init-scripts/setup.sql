@@ -1,4 +1,5 @@
-use meetme;
+CREATE DATABASE IF NOT EXISTS meetme;
+USE meetme;
 DROP TABLE IF EXISTS `dev_teams`;
 CREATE TABLE `dev_teams` (
   `team_id` int NOT NULL AUTO_INCREMENT,
